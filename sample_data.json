@@ -1,0 +1,557 @@
+{
+  "collections": {
+    "users": [
+      {
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "role": "admin",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Moderator User",
+        "email": "moderator@example.com",
+        "role": "moderator",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Regular User",
+        "email": "user@example.com",
+        "role": "user",
+        "delegations": ["proposer-user-id"],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Proposer User",
+        "email": "proposer@example.com",
+        "role": "proposer",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Maria Garcia",
+        "email": "maria@example.com",
+        "role": "user",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "John Smith",
+        "email": "john@example.com",
+        "role": "user",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Sarah Johnson",
+        "email": "sarah@example.com",
+        "role": "proposer",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Michael Lee",
+        "email": "michael@example.com",
+        "role": "user",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Emma Wilson",
+        "email": "emma@example.com",
+        "role": "user",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "David Brown",
+        "email": "david@example.com",
+        "role": "user",
+        "delegations": [],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "topics": [
+      {
+        "title": "City Planning",
+        "description": "Topics related to city planning, development, and infrastructure.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Environmental Initiatives",
+        "description": "Discussions about environmental policies, sustainability, and conservation efforts.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Public Transportation",
+        "description": "Issues and improvements regarding public transportation systems.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Education Reform",
+        "description": "Proposals to improve educational systems and policies.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Healthcare Access",
+        "description": "Topics related to healthcare accessibility, quality, and affordability.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Digital Democracy",
+        "description": "Leveraging technology to enhance democratic participation and transparency.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Community Safety",
+        "description": "Initiatives and policies regarding public safety and crime prevention.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "proposals": [
+      {
+        "title": "New Bike Lanes on Main Street",
+        "content": "This proposal aims to add protected bike lanes along Main Street to improve cyclist safety and encourage eco-friendly transportation. The bike lanes would extend for 2 miles and include physical barriers to separate cyclists from vehicular traffic.",
+        "authorId": "proposer-user-id",
+        "topicId": "city-planning-topic-id",
+        "status": "support",
+        "supporters": ["proposer-user-id", "regular-user-id", "maria-user-id", "john-user-id"],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Community Garden Initiative",
+        "content": "This proposal seeks to establish community gardens in underutilized public spaces. These gardens would provide fresh produce, educational opportunities, and community building spaces for residents.",
+        "authorId": "sarah-user-id",
+        "topicId": "environmental-topic-id",
+        "status": "discussion",
+        "supporters": ["sarah-user-id", "emma-user-id"],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Extended Public Transit Hours",
+        "content": "This proposal recommends extending public transportation service hours to 24/7 on weekends to support nightlife, service workers, and reduce drunk driving incidents.",
+        "authorId": "proposer-user-id",
+        "topicId": "transportation-topic-id",
+        "status": "frozen",
+        "supporters": ["proposer-user-id", "regular-user-id", "maria-user-id", "john-user-id", "michael-user-id", "emma-user-id", "david-user-id", "sarah-user-id", "admin-user-id", "moderator-user-id"],
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "After-School Program Funding",
+        "content": "This proposal calls for increased funding for after-school programs in underserved neighborhoods, providing educational support, recreational activities, and safe spaces for students.",
+        "authorId": "sarah-user-id",
+        "topicId": "education-topic-id",
+        "status": "voting",
+        "supporters": ["sarah-user-id", "maria-user-id", "john-user-id", "michael-user-id", "emma-user-id", "david-user-id", "proposer-user-id", "admin-user-id", "moderator-user-id", "regular-user-id"],
+        "voteStartDate": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Mental Health Services Expansion",
+        "content": "This proposal aims to expand mental health services at community health centers, including counseling, crisis intervention, and support groups for all residents regardless of insurance status.",
+        "authorId": "michael-user-id",
+        "topicId": "healthcare-topic-id",
+        "status": "voting",
+        "supporters": ["michael-user-id", "emma-user-id", "david-user-id", "sarah-user-id", "proposer-user-id", "admin-user-id", "moderator-user-id", "maria-user-id", "john-user-id", "regular-user-id"],
+        "voteStartDate": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Solar Panels on Public Buildings",
+        "content": "This proposal suggests installing solar panels on all municipal buildings to reduce energy costs and carbon footprint. The initiative would include an educational component for residents about renewable energy.",
+        "authorId": "david-user-id",
+        "topicId": "environmental-topic-id",
+        "status": "closed",
+        "supporters": ["david-user-id", "emma-user-id", "sarah-user-id", "proposer-user-id", "admin-user-id", "moderator-user-id", "maria-user-id", "john-user-id", "regular-user-id", "michael-user-id"],
+        "voteStartDate": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Participatory Budgeting Trial",
+        "content": "This proposal suggests allocating 5% of the city's discretionary budget to be directly decided by citizens through a participatory budgeting process, allowing communities to propose and vote on local projects.",
+        "authorId": "proposer-user-id",
+        "topicId": "digital-democracy-topic-id",
+        "status": "voting",
+        "supporters": ["proposer-user-id", "admin-user-id", "moderator-user-id", "maria-user-id", "john-user-id", "sarah-user-id", "michael-user-id", "emma-user-id", "david-user-id", "regular-user-id"],
+        "voteStartDate": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "title": "Neighborhood Watch Program",
+        "content": "This proposal aims to establish structured neighborhood watch programs with training, communication tools, and coordination with local law enforcement to enhance community safety.",
+        "authorId": "maria-user-id",
+        "topicId": "community-safety-topic-id",
+        "status": "voting",
+        "supporters": ["maria-user-id", "john-user-id", "proposer-user-id", "admin-user-id", "moderator-user-id", "sarah-user-id", "michael-user-id", "emma-user-id", "david-user-id", "regular-user-id"],
+        "voteStartDate": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "voteSessions": [
+      {
+        "proposalId": "after-school-proposal-id",
+        "method": "approvalVoting",
+        "options": ["Support with full funding", "Support with partial funding", "Do not support"],
+        "startDate": "TIMESTAMP",
+        "endDate": "TIMESTAMP",
+        "status": "active",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "mental-health-proposal-id",
+        "method": "starVoting",
+        "options": ["Comprehensive plan (full implementation)", "Moderate plan (phased implementation)", "Pilot program (limited scope)", "No action at this time"],
+        "startDate": "TIMESTAMP",
+        "endDate": "TIMESTAMP",
+        "status": "active",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "solar-panels-proposal-id",
+        "method": "firstPastThePost",
+        "options": ["Approve", "Reject", "Postpone for further study"],
+        "startDate": "TIMESTAMP",
+        "endDate": "TIMESTAMP",
+        "status": "closed",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "participatory-budgeting-proposal-id",
+        "method": "rangeVoting",
+        "options": ["5% of budget", "2.5% of budget", "10% of budget", "Pilot with fixed amount", "Do not implement"],
+        "startDate": "TIMESTAMP",
+        "endDate": "TIMESTAMP",
+        "status": "active",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "neighborhood-watch-proposal-id",
+        "method": "schulze",
+        "options": ["City-wide program", "High-priority neighborhoods only", "Volunteer-led program", "Enhanced police patrols instead", "No action at this time"],
+        "startDate": "TIMESTAMP",
+        "endDate": "TIMESTAMP",
+        "status": "active",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "votes": [
+      {
+        "userId": "admin-user-id",
+        "sessionId": "after-school-session-id",
+        "choice": ["Support with full funding"],
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "moderator-user-id",
+        "sessionId": "after-school-session-id",
+        "choice": ["Support with full funding", "Support with partial funding"],
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "sarah-user-id",
+        "sessionId": "after-school-session-id",
+        "choice": ["Support with full funding"],
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "proposer-user-id",
+        "sessionId": "mental-health-session-id",
+        "choice": {"Comprehensive plan (full implementation)": 5, "Moderate plan (phased implementation)": 3, "Pilot program (limited scope)": 1, "No action at this time": 0},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "michael-user-id",
+        "sessionId": "mental-health-session-id",
+        "choice": {"Comprehensive plan (full implementation)": 5, "Moderate plan (phased implementation)": 4, "Pilot program (limited scope)": 2, "No action at this time": 0},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "regular-user-id",
+        "sessionId": "solar-panels-session-id",
+        "choice": "Approve",
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "david-user-id",
+        "sessionId": "solar-panels-session-id",
+        "choice": "Approve",
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "emma-user-id",
+        "sessionId": "solar-panels-session-id",
+        "choice": "Approve",
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "admin-user-id",
+        "sessionId": "participatory-budgeting-session-id",
+        "choice": {"5% of budget": 7.5, "2.5% of budget": 5.0, "10% of budget": 3.0, "Pilot with fixed amount": 8.0, "Do not implement": 0.0},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "moderator-user-id",
+        "sessionId": "participatory-budgeting-session-id",
+        "choice": {"5% of budget": 6.0, "2.5% of budget": 8.0, "10% of budget": 2.0, "Pilot with fixed amount": 9.0, "Do not implement": 0.0},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "john-user-id",
+        "sessionId": "neighborhood-watch-session-id",
+        "choice": {"City-wide program": 1, "High-priority neighborhoods only": 2, "Volunteer-led program": 3, "Enhanced police patrols instead": 4, "No action at this time": 5},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "userId": "maria-user-id",
+        "sessionId": "neighborhood-watch-session-id",
+        "choice": {"City-wide program": 2, "High-priority neighborhoods only": 1, "Volunteer-led program": 3, "Enhanced police patrols instead": 4, "No action at this time": 5},
+        "isDelegated": false,
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "delegations": [
+      {
+        "delegatorId": "regular-user-id",
+        "delegateeId": "proposer-user-id",
+        "active": true,
+        "validUntil": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "delegatorId": "maria-user-id",
+        "delegateeId": "sarah-user-id",
+        "active": true,
+        "topicId": "education-topic-id",
+        "validUntil": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "delegatorId": "john-user-id",
+        "delegateeId": "michael-user-id",
+        "active": true,
+        "topicId": "healthcare-topic-id",
+        "validUntil": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "delegatorId": "emma-user-id",
+        "delegateeId": "david-user-id",
+        "active": true,
+        "topicId": "environmental-topic-id",
+        "validUntil": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "delegatorId": "david-user-id",
+        "delegateeId": "admin-user-id",
+        "active": true,
+        "topicId": "digital-democracy-topic-id",
+        "validUntil": "TIMESTAMP",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "groups": [
+      {
+        "name": "Environmental Advocates",
+        "memberIds": ["emma-user-id", "david-user-id", "sarah-user-id"],
+        "description": "A group focused on environmental issues and sustainability initiatives.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Education Task Force",
+        "memberIds": ["sarah-user-id", "maria-user-id", "john-user-id", "proposer-user-id"],
+        "description": "A group dedicated to improving educational opportunities and resources.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Transit Improvement Coalition",
+        "memberIds": ["proposer-user-id", "michael-user-id", "regular-user-id"],
+        "description": "A group working on public transportation and mobility solutions.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Digital Democracy Innovators",
+        "memberIds": ["admin-user-id", "proposer-user-id", "emma-user-id", "david-user-id"],
+        "description": "A group exploring technological tools to enhance democratic participation.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "name": "Community Safety Committee",
+        "memberIds": ["maria-user-id", "john-user-id", "michael-user-id", "moderator-user-id"],
+        "description": "A group working on initiatives to improve neighborhood safety and emergency response.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ],
+    "comments": [
+      {
+        "proposalId": "bike-lanes-proposal-id",
+        "authorId": "maria-user-id",
+        "content": "I strongly support this initiative. As a daily cyclist, I've experienced many close calls with cars on Main Street.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "bike-lanes-proposal-id",
+        "authorId": "john-user-id",
+        "content": "Have we considered the impact on parking availability for local businesses?",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "bike-lanes-proposal-id",
+        "authorId": "proposer-user-id",
+        "content": "@john The proposal includes a traffic study that found sufficient parking on side streets within 1 block of all affected businesses.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "community-garden-proposal-id",
+        "authorId": "emma-user-id",
+        "content": "I'd love to volunteer to help maintain one of these gardens. Can we include a section for native pollinator plants?",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "community-garden-proposal-id",
+        "authorId": "sarah-user-id",
+        "content": "@emma That's a great idea! I'll update the proposal to include dedicated spaces for native plants and pollinators.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "transit-hours-proposal-id",
+        "authorId": "michael-user-id",
+        "content": "As someone who works late shifts, this would be incredibly helpful. Currently, I have to spend a significant amount on rideshares to get home safely.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "transit-hours-proposal-id",
+        "authorId": "moderator-user-id",
+        "content": "This proposal has received overwhelming support. We'll be moving it to the voting phase soon.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "after-school-proposal-id",
+        "authorId": "regular-user-id",
+        "content": "Have we identified which neighborhoods would benefit most from these programs?",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "after-school-proposal-id",
+        "authorId": "sarah-user-id",
+        "content": "@regular Yes, we've conducted a needs assessment and identified 5 priority neighborhoods based on existing resources and youth population density.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "mental-health-proposal-id",
+        "authorId": "emma-user-id",
+        "content": "I work in healthcare and can confirm there's a significant gap in accessible mental health services. This proposal addresses a critical need.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "solar-panels-proposal-id",
+        "authorId": "admin-user-id",
+        "content": "The final vote results show 78% approval for this initiative. Implementation will begin next quarter.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "participatory-budgeting-proposal-id",
+        "authorId": "proposer-user-id",
+        "content": "I've included several options for the scale of implementation to gauge community preferences. Please vote for the option you believe strikes the right balance.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "participatory-budgeting-proposal-id",
+        "authorId": "david-user-id",
+        "content": "I suggest we start with a pilot using a fixed amount before committing to a percentage of the budget. This would allow us to establish processes and demonstrate value.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "neighborhood-watch-proposal-id",
+        "authorId": "maria-user-id",
+        "content": "I believe we should prioritize high-crime neighborhoods first. This targeted approach would allow us to maximize impact with limited resources.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      },
+      {
+        "proposalId": "neighborhood-watch-proposal-id",
+        "authorId": "john-user-id",
+        "content": "I support a city-wide approach to ensure equity across all neighborhoods. Safety shouldn't be determined by zip code.",
+        "createdAt": "TIMESTAMP",
+        "updatedAt": "TIMESTAMP"
+      }
+    ]
+  }
+}

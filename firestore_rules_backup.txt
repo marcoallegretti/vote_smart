@@ -1,0 +1,4 @@
+// This is a backup of the original Firestore security rules
+// To be restored after data seeding is complete
+
+// Original rules will be stored here when we fetch them
